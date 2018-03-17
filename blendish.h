@@ -1993,6 +1993,8 @@ void bndBevel(NVGcontext *ctx, float x, float y, float w, float h) {
 
 void bndBevelInset(NVGcontext *ctx, float x, float y, float w, float h,
     float cr2, float cr3) {
+    // Disable bevel
+    return;
     float d;
     
     y -= 0.5f;
