@@ -1965,6 +1965,8 @@ NVGcolor bndOffsetColor(NVGcolor color, int delta) {
 }
 
 void bndBevel(NVGcontext *ctx, float x, float y, float w, float h) {
+    // Disable bevel
+    return;
     nvgStrokeWidth(ctx, 1);
     
     x += 0.5f;
