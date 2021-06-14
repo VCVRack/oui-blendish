@@ -1148,7 +1148,7 @@ static double bnd_fmax ( double a, double b )
 ////////////////////////////////////////////////////////////////////////////////
 
 // default text size
-#define BND_LABEL_FONT_SIZE 11
+#define BND_LABEL_FONT_SIZE 13
 
 // default text padding in inner box
 #define BND_PAD_LEFT 8
