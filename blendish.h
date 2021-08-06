@@ -213,40 +213,129 @@ typedef enum BNDcornerFlags {
 // can be used in conjunction with nvgGlobalAlpha()
 #define BND_DISABLED_ALPHA 0.5
 
-enum {
-	// default widget height
-	BND_WIDGET_HEIGHT = 21,
-	// default toolbutton width (if icon only)
-	BND_TOOL_WIDTH = 20,
+// default widget height
+#define BND_WIDGET_HEIGHT 21
+// default toolbutton width (if icon only)
+#define BND_TOOL_WIDTH 20
 
-	// default radius of node ports
-	BND_NODE_PORT_RADIUS = 5,
-	// top margin of node content
-	BND_NODE_MARGIN_TOP = 25,
-	// bottom margin of node content
-	BND_NODE_MARGIN_DOWN = 5,
-	// left and right margin of node content
-	BND_NODE_MARGIN_SIDE = 10,
-	// height of node title bar
-	BND_NODE_TITLE_HEIGHT = 20,
-	// width of node title arrow click area
-	BND_NODE_ARROW_AREA_WIDTH = 20,
+// default radius of node ports
+#define BND_NODE_PORT_RADIUS 5
+// top margin of node content
+#define BND_NODE_MARGIN_TOP 25
+// bottom margin of node content
+#define BND_NODE_MARGIN_DOWN 5
+// left and right margin of node content
+#define BND_NODE_MARGIN_SIDE 10
+// height of node title bar
+#define BND_NODE_TITLE_HEIGHT 20
+// width of node title arrow click area
+#define BND_NODE_ARROW_AREA_WIDTH 20
 
-	// size of splitter corner click area
-	BND_SPLITTER_AREA_SIZE = 12,
+// size of splitter corner click area
+#define BND_SPLITTER_AREA_SIZE 12
 
-	// width of vertical scrollbar
-	BND_SCROLLBAR_WIDTH = 13,
-	// height of horizontal scrollbar
-	BND_SCROLLBAR_HEIGHT = 14,
+// width of vertical scrollbar
+#define BND_SCROLLBAR_WIDTH 13
+// height of horizontal scrollbar
+#define BND_SCROLLBAR_HEIGHT 14
 
-	// default vertical spacing
-	BND_VSPACING = 1,
-	// default vertical spacing between groups
-	BND_VSPACING_GROUP = 8,
-	// default horizontal spacing
-	BND_HSPACING = 8,
-};
+// default vertical spacing
+#define BND_VSPACING 1
+// default vertical spacing between groups
+#define BND_VSPACING_GROUP 8
+// default horizontal spacing
+#define BND_HSPACING 8
+
+// default text size
+#define BND_LABEL_FONT_SIZE 13
+
+// default text padding in inner box
+#define BND_PAD_LEFT 8
+#define BND_PAD_RIGHT 8
+
+// label: value separator string
+#define BND_LABEL_SEPARATOR ": "
+
+// alpha intensity of transparent items (0xa4)
+#define BND_TRANSPARENT_ALPHA 0.9
+
+// shade intensity of beveled panels
+#define BND_BEVEL_SHADE 30
+// shade intensity of beveled insets
+#define BND_INSET_BEVEL_SHADE 30
+// shade intensity of hovered inner boxes
+#define BND_HOVER_SHADE 15
+// shade intensity of splitter bevels
+#define BND_SPLITTER_SHADE 100
+
+// width of icon sheet
+#define BND_ICON_SHEET_WIDTH 602
+// height of icon sheet
+#define BND_ICON_SHEET_HEIGHT 640
+// gridsize of icon sheet in both dimensions
+#define BND_ICON_SHEET_GRID 21
+// offset of first icon tile relative to left border
+#define BND_ICON_SHEET_OFFSET_X 5
+// offset of first icon tile relative to top border
+#define BND_ICON_SHEET_OFFSET_Y 10
+// resolution of single icon
+#define BND_ICON_SHEET_RES 16
+
+// size of number field arrow
+#define BND_NUMBER_ARROW_SIZE 4
+
+// default text color
+#define BND_COLOR_TEXT {{{ 0,0,0,1 }}}
+// default highlighted text color
+#define BND_COLOR_TEXT_SELECTED {{{ 1,1,1,1 }}}
+
+// radius of tool button
+#define BND_TOOL_RADIUS 4
+
+// radius of option button
+#define BND_OPTION_RADIUS 4
+// width of option button checkbox
+#define BND_OPTION_WIDTH 14
+// height of option button checkbox
+#define BND_OPTION_HEIGHT 15
+
+// radius of text field
+#define BND_TEXT_RADIUS 4
+
+// radius of number button
+#define BND_NUMBER_RADIUS 10
+
+// radius of menu popup
+#define BND_MENU_RADIUS 3
+// feather of menu popup shadow
+#define BND_SHADOW_FEATHER 12
+// alpha of menu popup shadow
+#define BND_SHADOW_ALPHA 0.5
+
+// radius of scrollbar
+#define BND_SCROLLBAR_RADIUS 7
+// shade intensity of active scrollbar
+#define BND_SCROLLBAR_ACTIVE_SHADE 15
+
+// max glyphs for position testing
+#define BND_MAX_GLYPHS 1024
+
+// max rows for position testing
+#define BND_MAX_ROWS 32
+
+// text distance from bottom
+#define BND_TEXT_PAD_DOWN 7
+
+// stroke width of wire outline
+#define BND_NODE_WIRE_OUTLINE_WIDTH 4
+// stroke width of wire
+#define BND_NODE_WIRE_WIDTH 2
+// radius of node box
+#define BND_NODE_RADIUS 8
+// feather of node title text
+#define BND_NODE_TITLE_FEATHER 1
+// size of node title arrow
+#define BND_NODE_ARROW_SIZE 9
 
 typedef enum BNDicon {
 	BND_ICON_NONE = BND_ICONID(0,29),
@@ -1144,99 +1233,6 @@ static double bnd_fmax ( double a, double b )
     #define bnd_fmin(a, b) fmin(a, b)
     #define bnd_fmax(a, b) fmax(a, b)
 #endif
-
-////////////////////////////////////////////////////////////////////////////////
-
-// default text size
-#define BND_LABEL_FONT_SIZE 13
-
-// default text padding in inner box
-#define BND_PAD_LEFT 8
-#define BND_PAD_RIGHT 8
-
-// label: value separator string
-#define BND_LABEL_SEPARATOR ": "
-
-// alpha intensity of transparent items (0xa4)
-#define BND_TRANSPARENT_ALPHA 0.9
-
-// shade intensity of beveled panels
-#define BND_BEVEL_SHADE 30
-// shade intensity of beveled insets
-#define BND_INSET_BEVEL_SHADE 30
-// shade intensity of hovered inner boxes
-#define BND_HOVER_SHADE 15
-// shade intensity of splitter bevels
-#define BND_SPLITTER_SHADE 100
-
-// width of icon sheet
-#define BND_ICON_SHEET_WIDTH 602
-// height of icon sheet
-#define BND_ICON_SHEET_HEIGHT 640
-// gridsize of icon sheet in both dimensions
-#define BND_ICON_SHEET_GRID 21
-// offset of first icon tile relative to left border
-#define BND_ICON_SHEET_OFFSET_X 5
-// offset of first icon tile relative to top border
-#define BND_ICON_SHEET_OFFSET_Y 10
-// resolution of single icon
-#define BND_ICON_SHEET_RES 16
-
-// size of number field arrow
-#define BND_NUMBER_ARROW_SIZE 4
-
-// default text color
-#define BND_COLOR_TEXT {{{ 0,0,0,1 }}}
-// default highlighted text color
-#define BND_COLOR_TEXT_SELECTED {{{ 1,1,1,1 }}}
-
-// radius of tool button
-#define BND_TOOL_RADIUS 4
-
-// radius of option button
-#define BND_OPTION_RADIUS 4
-// width of option button checkbox
-#define BND_OPTION_WIDTH 14
-// height of option button checkbox
-#define BND_OPTION_HEIGHT 15
-
-// radius of text field
-#define BND_TEXT_RADIUS 4
-
-// radius of number button
-#define BND_NUMBER_RADIUS 10
-
-// radius of menu popup
-#define BND_MENU_RADIUS 3
-// feather of menu popup shadow
-#define BND_SHADOW_FEATHER 12
-// alpha of menu popup shadow
-#define BND_SHADOW_ALPHA 0.5
-
-// radius of scrollbar
-#define BND_SCROLLBAR_RADIUS 7
-// shade intensity of active scrollbar
-#define BND_SCROLLBAR_ACTIVE_SHADE 15
-
-// max glyphs for position testing
-#define BND_MAX_GLYPHS 1024
-
-// max rows for position testing
-#define BND_MAX_ROWS 32
-
-// text distance from bottom
-#define BND_TEXT_PAD_DOWN 7
-
-// stroke width of wire outline
-#define BND_NODE_WIRE_OUTLINE_WIDTH 4
-// stroke width of wire
-#define BND_NODE_WIRE_WIDTH 2
-// radius of node box
-#define BND_NODE_RADIUS 8
-// feather of node title text
-#define BND_NODE_TITLE_FEATHER 1
-// size of node title arrow
-#define BND_NODE_ARROW_SIZE 9
 
 ////////////////////////////////////////////////////////////////////////////////
 
