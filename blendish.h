@@ -25,6 +25,7 @@ THE SOFTWARE.
 #ifndef BLENDISH_H
 #define BLENDISH_H
 
+#include <stddef.h>
 #include <nanovg.h>
 
 #ifdef __cplusplus
