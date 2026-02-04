@@ -70,7 +70,7 @@ static double bnd_fmax ( double a, double b )
 
 ////////////////////////////////////////////////////////////////////////////////
 
-BND_INLINE float bnd_clamp(float v, float mn, float mx) {
+static BND_INLINE float bnd_clamp(float v, float mn, float mx) {
     return (v > mx)?mx:(v < mn)?mn:v;
 }
 
